@@ -50,6 +50,7 @@ class ViewController: UIViewController {
                     if inputPswrd != "" && inputPswrd != " "{
         
                         do {
+                            // narrows down request
                             request.predicate = NSPredicate(format: "username = %@" , inputname)
 
                             let results = try context.fetch(request)
