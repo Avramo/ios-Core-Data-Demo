@@ -47,6 +47,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XHd-ji-bnG"/>
+                                    <segue destination="blO-oW-Nmc" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="bZT-pR-6wq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -62,6 +66,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextfield" destination="aCE-ux-2u2" id="WKZ-EZ-d3v"/>
+                        <outlet property="usernameTextField" destination="N6W-8u-VgN" id="CPy-WD-cBS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +78,7 @@
         <!--User Page-->
         <scene sceneID="KlA-Yp-k6o">
             <objects>
-                <viewController title="User Page" id="blO-oW-Nmc" sceneMemberID="viewController">
+                <viewController title="User Page" id="blO-oW-Nmc" customClass="UserPageViewController" customModule="Core_Data_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UJt-1c-uFL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,6 +155,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="blO-oW-Nmc" eventType="touchUpInside" id="5rn-x5-v1N"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" modalPresentationStyle="fullScreen" id="9lv-TQ-Q8d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -177,6 +189,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ymR-dx-GFl"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Vf1-Vn-eqK"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="dne-Pb-2PC" id="P8m-7U-0VI"/>
+                        <outlet property="passwordLabel" destination="xL4-if-3i8" id="deQ-uu-cb0"/>
+                        <outlet property="usernameLabel" destination="Xmo-YI-Tpr" id="hhQ-1K-Rqa"/>
+                        <outlet property="welcomeLabel" destination="bUW-eC-kLD" id="xdr-gj-GW0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ctb-X2-nXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
